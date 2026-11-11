@@ -4,36 +4,145 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Juegos</title>
-  <meta name="description" content="Juegos sencillos para jugar en el navegador.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+  <meta name="description" content="Juegos sencillos para jugar en el navegador, solo o en clase.">
+  <link rel="icon" href="icono.svg" type="image/svg+xml">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
   <header>
     <h1>Juegos</h1>
-    <p>Juegos sencillos para jugar en el navegador.</p>
+    <p>Juegos sencillos para jugar en el navegador, solo o en clase.</p>
   </header>
 
   <main>
     <!-- Cada juego es un <li>. Los que viven en este repo enlazan a su carpeta (tetris/);
-         los que se publican en otro sitio, a su URL completa. -->
+         los que se publican en otro sitio, a su URL completa. Su color va en estilo.css. -->
     <section>
       <h2>Para jugar</h2>
+      <p>Uno solo, o dos en la misma pantalla.</p>
       <ul class="juegos">
-        <li><a href="tetris/"><strong>Tetris</strong><span>Con sombra de caída y diez niveles de velocidad. Se juega con el teclado.</span></a></li>
-        <li><a href="buscaminas/"><strong>Buscaminas</strong><span>Cinco tableros, del de 9 × 9 al de 100 × 100 con mil minas.</span></a></li>
-        <li><a href="https://mikeldalmauc.github.io/pasapalabra/"><strong>Pasapalabra</strong><span>El rosco en castellano, contra el reloj.</span></a></li>
-        <li><a href="https://mikeldalmauc.github.io/timeline-card-game/"><strong>Timeline</strong><span>Ordena en el tiempo hechos de la historia de Euskadi y España. En castellano y euskera.</span></a></li>
-        <li><a href="https://mikeldalmauc.github.io/chess-sala-interactiva/"><strong>Ajedrez</strong><span>Contra la máquina en cuatro niveles o dos jugadores con reloj. Pensado para mesa táctil.</span></a></li>
+        <li>
+          <a class="juego tetris" href="tetris/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="#f00100"><rect x="24" y="0" width="11" height="11"/><rect x="36" y="0" width="11" height="11"/><rect x="36" y="12" width="11" height="11"/><rect x="48" y="12" width="11" height="11"/></g>
+              <g fill="#f0f001"><rect x="0" y="24" width="11" height="11"/><rect x="12" y="24" width="11" height="11"/><rect x="0" y="36" width="11" height="11"/><rect x="12" y="36" width="11" height="11"/></g>
+              <g fill="#a000f1"><rect x="36" y="24" width="11" height="11"/><rect x="24" y="36" width="11" height="11"/><rect x="36" y="36" width="11" height="11"/><rect x="48" y="36" width="11" height="11"/></g>
+              <g fill="#01f0f1"><rect x="0" y="48" width="11" height="11"/><rect x="12" y="48" width="11" height="11"/><rect x="24" y="48" width="11" height="11"/><rect x="36" y="48" width="11" height="11"/></g>
+            </svg>
+            <strong>Tetris</strong>
+            <span>Con sombra de caída y diez niveles de velocidad. Se juega con el teclado.</span>
+          </a>
+        </li>
+        <li>
+          <a class="juego buscaminas" href="buscaminas/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="#0b0b2e">
+                <rect x="28" y="6" width="4" height="48" rx="2"/>
+                <rect x="6" y="28" width="48" height="4" rx="2"/>
+                <rect x="28" y="10" width="4" height="40" rx="2" transform="rotate(45 30 30)"/>
+                <rect x="28" y="10" width="4" height="40" rx="2" transform="rotate(-45 30 30)"/>
+                <circle cx="30" cy="30" r="16"/>
+              </g>
+              <circle cx="24" cy="24" r="4.5" fill="#fff"/>
+            </svg>
+            <strong>Buscaminas</strong>
+            <span>Cinco tableros, del de 9 × 9 al de 100 × 100 con mil minas.</span>
+          </a>
+        </li>
+        <li>
+          <a class="juego pasapalabra" href="https://mikeldalmauc.github.io/pasapalabra/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="#4d8dff">
+                <circle cx="30" cy="5" r="5"/><circle cx="42.5" cy="8.3" r="5"/><circle cx="51.7" cy="17.5" r="5"/>
+                <circle cx="55" cy="30" r="5"/><circle cx="51.7" cy="42.5" r="5"/><circle cx="42.5" cy="51.7" r="5"/>
+                <circle cx="30" cy="55" r="5"/><circle cx="17.5" cy="51.7" r="5"/><circle cx="8.3" cy="42.5" r="5"/>
+              </g>
+              <g fill="#3ddc68"><circle cx="5" cy="30" r="5"/><circle cx="8.3" cy="17.5" r="5"/></g>
+              <circle cx="17.5" cy="8.3" r="5" fill="#dc3237"/>
+              <circle cx="30" cy="5" r="5" fill="#ffc233"/>
+              <text x="30" y="37" text-anchor="middle" font-size="20" font-weight="800" fill="#fff" font-family="system-ui, sans-serif">A</text>
+            </svg>
+            <strong>Pasapalabra</strong>
+            <span>El rosco en castellano, contra el reloj.</span>
+          </a>
+        </li>
+        <li>
+          <a class="juego ajedrez" href="https://mikeldalmauc.github.io/chess-sala-interactiva/">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect width="24" height="24" rx="5" fill="#262421"/>
+              <rect x="3" y="3" width="8.5" height="8.5" rx="1.5" fill="#f1efe9"/>
+              <rect x="12.5" y="3" width="8.5" height="8.5" rx="1.5" fill="#81b64c"/>
+              <rect x="3" y="12.5" width="8.5" height="8.5" rx="1.5" fill="#81b64c"/>
+              <rect x="12.5" y="12.5" width="8.5" height="8.5" rx="1.5" fill="#f1efe9"/>
+            </svg>
+            <strong>Ajedrez</strong>
+            <span>Contra la máquina en cuatro niveles o dos jugadores con reloj. Pensado para mesa táctil.</span>
+          </a>
+        </li>
       </ul>
     </section>
 
     <section>
       <h2>Para clase</h2>
+      <p>Para jugar en grupo, con el proyector o en la sala interactiva.</p>
       <ul class="juegos">
-        <li><a href="https://pixel-war.lamdera.app/"><strong>Guerra de píxeles</strong><span>Cada uno pinta casillas de su color durante 60 s; gana quien más tenga.</span></a></li>
-        <li><a href="https://mikeldalmauc.github.io/dixit-sala-interactiva/"><strong>Dixit</strong><span>Para la sala interactiva: pantalla central y una pared táctil por mesa.</span></a></li>
-        <li><div><strong>Archipiélago</strong><span>Conquista pirata: retos de la asignatura para ganar doblones y apuestas secretas por las islas.</span><em>Próximamente</em></div></li>
+        <li>
+          <a class="juego timeline" href="https://mikeldalmauc.github.io/timeline-card-game/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <rect x="2" y="46" width="56" height="4" rx="2" fill="#F7F3EF"/>
+              <rect x="4" y="22" width="15" height="20" rx="2" fill="#F7F3EF"/>
+              <rect x="41" y="22" width="15" height="20" rx="2" fill="#F7F3EF"/>
+              <rect x="22" y="8" width="15" height="20" rx="2" fill="#283618" transform="rotate(-8 29.5 18)"/>
+              <g fill="#BC6C25"><rect x="7" y="36" width="9" height="3" rx="1"/><rect x="44" y="36" width="9" height="3" rx="1"/></g>
+              <rect x="25" y="22" width="9" height="3" rx="1" fill="#E9B872" transform="rotate(-8 29.5 18)"/>
+            </svg>
+            <strong>Timeline</strong>
+            <span>Ordena en el tiempo hechos de la historia de Euskadi y España. En castellano y euskera.</span>
+          </a>
+        </li>
+        <li>
+          <a class="juego pixeles" href="https://pixel-war.lamdera.app/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <g fill="#ffd23f"><rect x="0" y="0" width="14" height="14"/><rect x="15" y="0" width="14" height="14"/><rect x="0" y="15" width="14" height="14"/><rect x="45" y="30" width="14" height="14"/></g>
+              <g fill="#ff7a7a"><rect x="45" y="0" width="14" height="14"/><rect x="30" y="15" width="14" height="14"/><rect x="45" y="15" width="14" height="14"/></g>
+              <g fill="#3ddc68"><rect x="0" y="45" width="14" height="14"/><rect x="15" y="30" width="14" height="14"/><rect x="15" y="45" width="14" height="14"/></g>
+              <g fill="#4d8dff"><rect x="30" y="30" width="14" height="14"/><rect x="30" y="45" width="14" height="14"/><rect x="45" y="45" width="14" height="14"/></g>
+              <g fill="#2a3350"><rect x="30" y="0" width="14" height="14"/><rect x="15" y="15" width="14" height="14"/><rect x="0" y="30" width="14" height="14"/></g>
+            </svg>
+            <strong>Guerra de píxeles</strong>
+            <span>Cada uno pinta casillas de su color durante 60 s; gana quien más tenga.</span>
+          </a>
+        </li>
+        <li>
+          <a class="juego dixit" href="https://mikeldalmauc.github.io/dixit-sala-interactiva/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <rect x="10" y="12" width="24" height="36" rx="3" fill="#A33A1F" transform="rotate(-18 22 48)"/>
+              <rect x="26" y="12" width="24" height="36" rx="3" fill="#283618" transform="rotate(18 38 48)"/>
+              <rect x="18" y="8" width="24" height="36" rx="3" fill="#F7F3EF"/>
+              <circle cx="30" cy="24" r="8" fill="#283618"/>
+              <circle cx="34" cy="21" r="7" fill="#F7F3EF"/>
+            </svg>
+            <strong>Dixit</strong>
+            <span>Para la sala interactiva: pantalla central y una pared táctil por mesa.</span>
+          </a>
+        </li>
+        <li>
+          <a class="juego archipielago" href="https://archipelago.lamdera.app/">
+            <svg viewBox="0 0 60 60" aria-hidden="true">
+              <ellipse cx="30" cy="50" rx="26" ry="9" fill="#f2d27a"/>
+              <path d="M30 46 C 30 34, 32 26, 38 18" stroke="#6b4226" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <g fill="#1d6b2f">
+                <ellipse cx="30" cy="16" rx="11" ry="4.5" transform="rotate(20 38 18)"/>
+                <ellipse cx="46" cy="16" rx="11" ry="4.5" transform="rotate(-20 38 18)"/>
+                <ellipse cx="38" cy="10" rx="4.5" ry="10"/>
+              </g>
+              <rect x="10" y="40" width="3" height="10" fill="#2b1d14"/>
+              <path d="M13 40 L 22 43 L 13 46 Z" fill="#b3261e"/>
+            </svg>
+            <strong>Archipiélago</strong>
+            <span>Conquista pirata: retos de la asignatura para ganar doblones y apuestas secretas por las islas.</span>
+          </a>
+        </li>
       </ul>
     </section>
   </main>

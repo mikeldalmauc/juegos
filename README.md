@@ -12,11 +12,11 @@ HTML y CSS a pelo: sin dependencias ni paso de build. Lo que se sube a `main` se
 | Tetris | `tetris/` de este repo | [tetris](https://github.com/mikeldalmauc/tetris), compilado |
 | Buscaminas | `buscaminas/` de este repo | [buscaminas](https://github.com/mikeldalmauc/buscaminas) |
 | Pasapalabra | su propio GitHub Pages | [pasapalabra](https://github.com/mikeldalmauc/pasapalabra) |
-| Timeline | su propio GitHub Pages | [timeline-card-game](https://github.com/mikeldalmauc/timeline-card-game) |
 | Ajedrez | su propio GitHub Pages | [chess-sala-interactiva](https://github.com/mikeldalmauc/chess-sala-interactiva) |
-| Dixit | su propio GitHub Pages | [dixit-sala-interactiva](https://github.com/mikeldalmauc/dixit-sala-interactiva) |
-| Guerra de píxeles | https://pixel-war.lamdera.app | `pixel-war` (Lamdera) |
-| Archipiélago | sin publicar todavía | `archipielago` (Lamdera) |
+| Timeline (clase) | su propio GitHub Pages | [timeline-card-game](https://github.com/mikeldalmauc/timeline-card-game) |
+| Guerra de píxeles (clase) | https://pixel-war.lamdera.app | `pixel-war` (Lamdera) |
+| Dixit (clase) | su propio GitHub Pages | [dixit-sala-interactiva](https://github.com/mikeldalmauc/dixit-sala-interactiva) |
+| Archipiélago (clase) | https://archipelago.lamdera.app | `archipielago` (Lamdera) |
 
 Los que ya se publican solos se enlazan, no se copian: así cada uno se actualiza desde su repo.
 
@@ -25,8 +25,16 @@ Los que ya se publican solos se enlazan, no se copian: así cada uno se actualiz
 - **Si ya está publicado en otro sitio:** añade su tarjeta a `index.html` con la URL completa.
 - **Si es estático y no tiene web propia:** cópialo a una carpeta (`nombre/index.html`, con rutas relativas, nunca `/assets/...`) y enlaza `nombre/`.
 
+Cada tarjeta lleva un icono dibujado en SVG dentro del propio `index.html` y una clase con el color del juego, que se define al final de `estilo.css` (`--color` de fondo y `--tinta` para el texto, con contraste suficiente):
+
 ```html
-<li><a href="nombre/"><strong>Nombre</strong><span>Una línea sobre el juego.</span></a></li>
+<li>
+  <a class="juego nombre" href="nombre/">
+    <svg viewBox="0 0 60 60" aria-hidden="true">…</svg>
+    <strong>Nombre</strong>
+    <span>Una línea sobre el juego.</span>
+  </a>
+</li>
 ```
 
 ## Actualizar tetris o buscaminas

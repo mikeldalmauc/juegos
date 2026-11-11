@@ -11,3 +11,6 @@ Los originales pedían `/assets/...`, que en GitHub Pages apunta a la raíz del 
 
 ## D-04 · Buscaminas sin jQuery (11/11/2026)
 El HTML original cargaba jQuery de un CDN, pero el código no lo usa. Fuera, para no depender de un tercero.
+
+## D-05 · Cada juego pone su color y su icono (11/11/2026)
+Mikel pidió iconos y color. La página es neutra (gris claro u oscuro, sin acento) y cada tarjeta es un campo del color de su juego, sacado del propio juego: el azul del «1» de Buscaminas, el verde del tablero de Ajedrez, el navy del rosco, el marrón de Timeline, el dorado de Dixit, el mar de Archipiélago. Los iconos están dibujados en SVG con esos colores (el de Ajedrez es su propio favicon). Sin bordes ni sombras; texto blanco u oscuro según el contraste. Sin fotos ni vídeo, para que siga siendo sencilla.

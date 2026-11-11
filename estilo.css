@@ -1,21 +1,14 @@
+/* Página neutra; el color lo pone cada juego en su tarjeta. */
 :root {
-  --fondo: #f6f5f1;
-  --texto: #1c1b19;
-  --suave: #6b6862;
-  --tarjeta: #ffffff;
-  --borde: #e2dfd8;
-  --acento: #d9480f;
+  --fondo: #f3f3f3;
+  --texto: #141414;
   color-scheme: light dark;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --fondo: #141413;
-    --texto: #ecebe7;
-    --suave: #9a978f;
-    --tarjeta: #1e1e1c;
-    --borde: #2e2d2a;
-    --acento: #ff7a3d;
+    --fondo: #121212;
+    --texto: #f0f0f0;
   }
 }
 
@@ -23,70 +16,121 @@
 
 body {
   margin: 0 auto;
-  max-width: 60rem;
-  padding: 3rem 1.25rem;
+  max-width: 76rem;
+  padding: 3.5rem 1.5rem;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
   background: var(--fondo);
   color: var(--texto);
 }
 
-header h1 {
-  margin: 0;
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  letter-spacing: -0.03em;
+h1 {
+  margin: 0 0 0.2em;
+  font-size: clamp(4rem, 13vw, 9.5rem);
+  line-height: 1;
+  letter-spacing: -0.045em;
 }
 
-header p { margin: 0.25rem 0 2.5rem; color: var(--suave); }
+header p { margin: 0; font-size: 1.25rem; }
 
-section + section { margin-top: 2.5rem; }
+section { margin-top: 4.5rem; }
 
 h2 {
-  margin: 0 0 1rem;
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--suave);
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
+section > p { margin: 0.35rem 0 1.5rem; font-size: 1.05rem; }
+
+/* Tarjetas: un campo de color por juego, sin bordes ni sombras. */
 .juegos {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   gap: 1rem;
 }
 
-.juegos a,
-.juegos li > div {
-  display: block;
+.juego {
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  padding: 1.25rem;
-  border: 1px solid var(--borde);
-  border-radius: 0.75rem;
-  background: var(--tarjeta);
-  color: inherit;
+  min-height: 17rem;
+  padding: 1.5rem;
+  background: var(--color);
+  color: var(--tinta);
   text-decoration: none;
-  transition: border-color 0.15s, transform 0.15s;
+  transition: transform 0.2s ease;
 }
 
-.juegos a:hover,
-.juegos a:focus-visible { border-color: var(--acento); transform: translateY(-2px); }
-
-.juegos strong { display: block; font-size: 1.15rem; }
-.juegos span { display: block; margin-top: 0.25rem; color: var(--suave); font-size: 0.95rem; }
-
-/* Juego sin publicar todavía: tarjeta sin enlace y apagada. */
-.juegos li > div { border-style: dashed; background: transparent; }
-.juegos em {
-  display: inline-block;
-  margin-top: 0.75rem;
-  font-size: 0.8rem;
-  font-style: normal;
-  color: var(--acento);
+.juego svg {
+  width: 4.5rem;
+  height: 4.5rem;
+  margin-bottom: auto;
+  transition: transform 0.25s ease;
 }
 
-footer { margin-top: 4rem; font-size: 0.9rem; }
-footer a { color: var(--suave); }
+.juego strong {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.juego span { margin-top: 0.4rem; font-size: 1rem; }
+
+/* Entrada escalonada de las tarjetas al cargar. */
+@keyframes entra { from { opacity: 0; transform: translateY(20px); } }
+.juegos li { animation: entra 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+.juegos li:nth-child(2) { animation-delay: 70ms; }
+.juegos li:nth-child(3) { animation-delay: 140ms; }
+.juegos li:nth-child(4) { animation-delay: 210ms; }
+section + section .juegos li { animation-delay: 280ms; }
+section + section .juegos li:nth-child(2) { animation-delay: 350ms; }
+section + section .juegos li:nth-child(3) { animation-delay: 420ms; }
+section + section .juegos li:nth-child(4) { animation-delay: 490ms; }
+
+a.juego:hover { transform: translateY(-4px); }
+a.juego:hover svg { transform: rotate(-8deg) scale(1.08); }
+a.juego:active { transform: translateY(0); }
+a.juego:focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; }
+
+/* Los colores salen de cada juego. */
+.tetris       { --color: #0d0d0d; --tinta: #ffffff; }
+.buscaminas   { --color: #2929d4; --tinta: #ffffff; }
+.pasapalabra  { --color: #0b1d4a; --tinta: #ffffff; }
+.ajedrez      { --color: #81b64c; --tinta: #1b1a18; }
+.timeline     { --color: #a3591f; --tinta: #ffffff; }
+.pixeles      { --color: #1a2033; --tinta: #ffffff; }
+.dixit        { --color: #e9b872; --tinta: #283618; }
+.archipielago { --color: #1f9fc9; --tinta: #04141a; }
+
+/* En oscuro, el negro de Tetris se perdería contra el fondo. */
+@media (prefers-color-scheme: dark) {
+  .tetris { --color: #2a2a2a; }
+}
+
+/* En el móvil, icono a la izquierda y texto a la derecha. */
+@media (max-width: 34rem) {
+  .juego {
+    display: grid;
+    grid-template-columns: 3.5rem 1fr;
+    column-gap: 1rem;
+    min-height: 0;
+    padding: 1.25rem;
+  }
+  .juego svg { grid-row: span 2; width: 3.5rem; height: 3.5rem; margin: 0; }
+  .juego strong { margin-top: 0; font-size: 1.35rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .juegos li { animation: none; }
+  .juego, .juego svg { transition: none; }
+  a.juego:hover, a.juego:hover svg { transform: none; }
+}
+
+footer { margin-top: 5rem; font-size: 1rem; }
+footer a { color: inherit; }
