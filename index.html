@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Juegos</title>
   <meta name="description" content="Juegos sencillos para jugar en el navegador.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
@@ -14,10 +15,27 @@
   </header>
 
   <main>
-    <!-- Cada juego vive en su carpeta (p. ej. tetris/index.html) y se añade aquí con un <li>. -->
-    <ul class="juegos">
-    </ul>
-    <p class="vacio">Todavía no hay juegos. Pronto.</p>
+    <!-- Cada juego es un <li>. Los que viven en este repo enlazan a su carpeta (tetris/);
+         los que se publican en otro sitio, a su URL completa. -->
+    <section>
+      <h2>Para jugar</h2>
+      <ul class="juegos">
+        <li><a href="tetris/"><strong>Tetris</strong><span>Con sombra de caída y diez niveles de velocidad. Se juega con el teclado.</span></a></li>
+        <li><a href="buscaminas/"><strong>Buscaminas</strong><span>Cinco tableros, del de 9 × 9 al de 100 × 100 con mil minas.</span></a></li>
+        <li><a href="https://mikeldalmauc.github.io/pasapalabra/"><strong>Pasapalabra</strong><span>El rosco en castellano, contra el reloj.</span></a></li>
+        <li><a href="https://mikeldalmauc.github.io/timeline-card-game/"><strong>Timeline</strong><span>Ordena en el tiempo hechos de la historia de Euskadi y España. En castellano y euskera.</span></a></li>
+        <li><a href="https://mikeldalmauc.github.io/chess-sala-interactiva/"><strong>Ajedrez</strong><span>Contra la máquina en cuatro niveles o dos jugadores con reloj. Pensado para mesa táctil.</span></a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Para clase</h2>
+      <ul class="juegos">
+        <li><a href="https://pixel-war.lamdera.app/"><strong>Guerra de píxeles</strong><span>Cada uno pinta casillas de su color durante 60 s; gana quien más tenga.</span></a></li>
+        <li><a href="https://mikeldalmauc.github.io/dixit-sala-interactiva/"><strong>Dixit</strong><span>Para la sala interactiva: pantalla central y una pared táctil por mesa.</span></a></li>
+        <li><div><strong>Archipiélago</strong><span>Conquista pirata: retos de la asignatura para ganar doblones y apuestas secretas por las islas.</span><em>Próximamente</em></div></li>
+      </ul>
+    </section>
   </main>
 
   <footer>

@@ -39,6 +39,17 @@ header h1 {
 
 header p { margin: 0.25rem 0 2.5rem; color: var(--suave); }
 
+section + section { margin-top: 2.5rem; }
+
+h2 {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--suave);
+}
+
 .juegos {
   list-style: none;
   margin: 0;
@@ -48,7 +59,8 @@ header p { margin: 0.25rem 0 2.5rem; color: var(--suave); }
   gap: 1rem;
 }
 
-.juegos a {
+.juegos a,
+.juegos li > div {
   display: block;
   height: 100%;
   padding: 1.25rem;
@@ -64,11 +76,17 @@ header p { margin: 0.25rem 0 2.5rem; color: var(--suave); }
 .juegos a:focus-visible { border-color: var(--acento); transform: translateY(-2px); }
 
 .juegos strong { display: block; font-size: 1.15rem; }
-.juegos span { color: var(--suave); font-size: 0.95rem; }
+.juegos span { display: block; margin-top: 0.25rem; color: var(--suave); font-size: 0.95rem; }
 
-/* El aviso desaparece en cuanto la lista tiene algún juego. */
-.juegos:has(li) + .vacio { display: none; }
-.vacio { color: var(--suave); }
+/* Juego sin publicar todavía: tarjeta sin enlace y apagada. */
+.juegos li > div { border-style: dashed; background: transparent; }
+.juegos em {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  font-style: normal;
+  color: var(--acento);
+}
 
 footer { margin-top: 4rem; font-size: 0.9rem; }
 footer a { color: var(--suave); }
