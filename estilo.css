@@ -88,10 +88,11 @@ section > p { margin: 0.35rem 0 1.5rem; font-size: 1.05rem; }
 .juegos li:nth-child(2) { animation-delay: 70ms; }
 .juegos li:nth-child(3) { animation-delay: 140ms; }
 .juegos li:nth-child(4) { animation-delay: 210ms; }
-section + section .juegos li { animation-delay: 280ms; }
-section + section .juegos li:nth-child(2) { animation-delay: 350ms; }
-section + section .juegos li:nth-child(3) { animation-delay: 420ms; }
-section + section .juegos li:nth-child(4) { animation-delay: 490ms; }
+.juegos li:nth-child(5) { animation-delay: 280ms; }
+section + section .juegos li { animation-delay: 350ms; }
+section + section .juegos li:nth-child(2) { animation-delay: 420ms; }
+section + section .juegos li:nth-child(3) { animation-delay: 490ms; }
+section + section .juegos li:nth-child(4) { animation-delay: 560ms; }
 
 a.juego:hover { transform: translateY(-4px); }
 a.juego:hover svg { transform: rotate(-8deg) scale(1.08); }
@@ -103,6 +104,7 @@ a.juego:focus-visible { outline: 3px solid var(--texto); outline-offset: 3px; }
 .buscaminas   { --color: #2929d4; --tinta: #ffffff; }
 .pasapalabra  { --color: #0b1d4a; --tinta: #ffffff; }
 .ajedrez      { --color: #81b64c; --tinta: #1b1a18; }
+.andanada     { --color: #3b1d5e; --tinta: #ffffff; }
 .timeline     { --color: #a3591f; --tinta: #ffffff; }
 .pixeles      { --color: #1a2033; --tinta: #ffffff; }
 .dixit        { --color: #e9b872; --tinta: #283618; }

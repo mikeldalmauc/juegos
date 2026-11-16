@@ -13,6 +13,7 @@ HTML y CSS a pelo: sin dependencias ni paso de build. Lo que se sube a `main` se
 | Buscaminas | `buscaminas/` de este repo | [buscaminas](https://github.com/mikeldalmauc/buscaminas) |
 | Pasapalabra | su propio GitHub Pages | [pasapalabra](https://github.com/mikeldalmauc/pasapalabra) |
 | Ajedrez | su propio GitHub Pages | [chess-sala-interactiva](https://github.com/mikeldalmauc/chess-sala-interactiva) |
+| Andanada | https://andanada.lamdera.app | `andanada` (Lamdera) |
 | Timeline (clase) | su propio GitHub Pages | [timeline-card-game](https://github.com/mikeldalmauc/timeline-card-game) |
 | Guerra de píxeles (clase) | https://pixel-war.lamdera.app | `pixel-war` (Lamdera) |
 | Dixit (clase) | su propio GitHub Pages | [dixit-sala-interactiva](https://github.com/mikeldalmauc/dixit-sala-interactiva) |

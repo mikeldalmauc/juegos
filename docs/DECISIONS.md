@@ -14,3 +14,7 @@ El HTML original cargaba jQuery de un CDN, pero el código no lo usa. Fuera, par
 
 ## D-05 · Cada juego pone su color y su icono (11/11/2026)
 Mikel pidió iconos y color. La página es neutra (gris claro u oscuro, sin acento) y cada tarjeta es un campo del color de su juego, sacado del propio juego: el azul del «1» de Buscaminas, el verde del tablero de Ajedrez, el navy del rosco, el marrón de Timeline, el dorado de Dixit, el mar de Archipiélago. Los iconos están dibujados en SVG con esos colores (el de Ajedrez es su propio favicon). Sin bordes ni sombras; texto blanco u oscuro según el contraste. Sin fotos ni vídeo, para que siga siendo sencilla.
+
+
+## D-06 · Andanada, en «Para jugar» (16/11/2026)
+Andanada es de ocio y se juega en línea, cada uno en su móvil: no es «para clase» ni cabe en «uno solo o dos en la misma pantalla». En vez de abrir un tercer bloque para una sola tarjeta, va en «Para jugar» y la frase del bloque pasa a decir que también hay juegos con amigos en línea. Vive en `andanada.lamdera.app` (Lamdera, como Guerra de píxeles y Archipiélago) y se enlaza. Su color es el morado de la tormenta; el icono, un barco visto desde arriba soltando una andanada.
